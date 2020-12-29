@@ -21,7 +21,13 @@ module.exports={
     .set('@',resolve('./src'))
     .set('assets',resolve('./src/assets'))
     .set('components',resolve('./src/components'))
-    .set('view',resolve('./src/views'))
+    .set('views',resolve('./src/views'))
     .set('network',resolve('./src/network'))
+
+    // config.plugin('html')
+    // .tap(args=>{
+    //   args[0].title='商城';
+    //   return args;
+    // })
   }
 }
