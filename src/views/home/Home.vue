@@ -14,16 +14,72 @@
       <home-swiper :banners="banners"></home-swiper>
       <recommend-view :recommends="recommends"></recommend-view>
       <home-future></home-future>
+      <tab-control class="tab-control" :titles="['流行新款', '复古浪潮', '质朴精选']"></tab-control>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from "components/common/NavBar/NavBar";
 import { getHomeMulitData } from "network/home";
+
 import HomeSwiper from "./HomeChildren/HomeSwiper";
 import RecommendView from "./HomeChildren/RecommendView";
 import HomeFuture from "./HomeChildren/HomeFuture";
+
+import NavBar from "components/common/NavBar/NavBar";
+import TabControl from "components/content/TabControl/TabControl";
 
 export default {
   name: "Home",
@@ -32,6 +88,7 @@ export default {
     HomeSwiper,
     RecommendView,
     HomeFuture,
+    TabControl,
   },
   data() {
     return {
@@ -67,10 +124,11 @@ export default {
 }
 
 .content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 44px;
-  bottom: 49px;
+  margin-top: 44px;
+}
+.tab-control{
+  position: sticky;
+  top: 41px;
+  z-index: 0;
 }
 </style>
